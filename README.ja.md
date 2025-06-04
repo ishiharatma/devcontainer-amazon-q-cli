@@ -21,7 +21,8 @@ Amazon Q CLI用のDevContainerテンプレートです。AI駆動のコーディ
 
 ## Amazon Q CLIの使用
 
-Amazon Qチャットの開始
+### Amazon Qチャットの開始
+
 新しいAmazon Qチャットセッションを開始するには、以下のコマンドを使用してください。
 
 ```sh
@@ -34,7 +35,8 @@ q chat
 
 画像に示されているように、Amazon Qは初期化中にMCP（Managed Code Processing）サーバーに正常に接続します。
 
-利用可能なツール
+### 利用可能なツール
+
 Amazon Qには開発プロセスを支援する様々なツールが含まれています。これらは以下を確認することで表示できます。
 
 ![q-chat-tools](/images/q-chat-tools.jpg)

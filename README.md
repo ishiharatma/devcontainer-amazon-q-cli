@@ -23,7 +23,8 @@ This script installs all necessary dependencies and configures the Amazon Q CLI 
 
 ## Using Amazon Q CLI
 
-Starting Amazon Q Chat
+### Starting Amazon Q Chat
+
 To start a new Amazon Q chat session, use the following command:
 
 ```sh
@@ -36,7 +37,8 @@ Upon startup, you'll see the initial chat interface where Amazon Q connects to M
 
 As shown in the image, Amazon Q successfully connects to the MCP (Managed Code Processing) server during initialization.
 
-Available Tools
+### Available Tools
+
 Amazon Q comes with various tools to assist your development process. You can view these by checking:
 
 ![q-chat-tools](/images/q-chat-tools.jpg)
