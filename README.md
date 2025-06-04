@@ -52,4 +52,5 @@ Pre-configured development environment with all dependencies installed
 - Seamless Amazon Q CLI integration
 - Access to MCP server for enhanced coding assistance
 - Ready to use without manual configuration steps
-- Enjoy developing with AI-powered assistance from Amazon Q!
+
+Enjoy developing with AI-powered assistance from Amazon Q!
