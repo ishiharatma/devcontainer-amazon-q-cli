@@ -19,8 +19,6 @@ Amazon Q CLI用のDevContainerテンプレートです。AI駆動のコーディ
 
 ![postCreateCommand](/images/docker-postcreatecommand.jpg)
 
-このスクリプトは必要なすべての依存関係をインストールし、Amazon Q CLIをすぐに使用できるように設定します。
-
 ## Amazon Q CLIの使用
 
 Amazon Qチャットの開始
