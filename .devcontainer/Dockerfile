@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye
 
 # 追加パッケージをインストール
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -12,6 +12,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     fonts-dejavu-core \
     graphviz \
     sudo \
+    ca-certificates \
+    gnupg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -19,6 +21,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN useradd -m vscode -s /bin/bash && \
     echo "vscode ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vscode && \
     chmod 0440 /etc/sudoers.d/vscode
+
+# AWS CDK CLIをグローバルにインストール
+RUN npm install -g aws-cdk \
+    && npm install -g typescript
 
 # vscodeユーザーに切り替え
 USER vscode
@@ -38,3 +44,4 @@ RUN curl --proto '=https' --tlsv1.2 -sSf "https://desktop-release.q.us-east-1.am
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 # add .local/bin to PATH
 ENV PATH="/home/vscode/.local/bin:${PATH}"
+
