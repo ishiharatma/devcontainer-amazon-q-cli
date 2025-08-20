@@ -31,14 +31,17 @@ USER vscode
 WORKDIR /home/vscode
 
 # Amazon Q CLIをvscodeユーザーとしてインストール
-RUN curl --proto '=https' --tlsv1.2 -sSf "https://desktop-release.q.us-east-1.amazonaws.com/latest/q-x86_64-linux-musl.zip" -o "/tmp/q.zip" && \
+RUN export OS=$(uname -m) && \
+    if [ -n "$OS" ]; then \
+    curl --proto '=https' --tlsv1.2 -sSf "https://desktop-release.q.us-east-1.amazonaws.com/latest/q-${OS}-linux-musl.zip" -o "/tmp/q.zip" && \
     cd /tmp && \
     unzip q.zip && \
     cd q && \
     ./install.sh --no-confirm&& \
     cd / && \
     sudo rm -rf /tmp/q && \
-    sudo rm -f /tmp/q.zip
+    sudo rm -f /tmp/q.zip; \
+    fi
 
 # install uv
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh

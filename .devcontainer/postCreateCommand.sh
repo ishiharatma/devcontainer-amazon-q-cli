@@ -15,6 +15,7 @@ echo 'alias qhelp="q --help"' >> ~/.bashrc
 echo 'alias qv="q --version"' >> ~/.bashrc
 echo 'alias ql="q login"' >> ~/.bashrc
 echo 'alias qc="q chat"' >> ~/.bashrc
+echo 'alias qd="q doctor"' >> ~/.bashrc
 
 echo '
 # プロファイル指定可能なAWS SSOログイン関数
@@ -75,6 +76,7 @@ tips() {
   echo "  「qv」: Amazon Q CLIのバージョンを表示"
   echo "  「ql」: Amazon Q CLIでログイン"
   echo "  「qc」: Amazon Q CLIでチャットを開始"
+  echo "  「qd」: Amazon Q CLIでドクターを実行"
   echo ""
   echo "その他："
   echo "  「tips」: このヘルプメッセージを表示"
