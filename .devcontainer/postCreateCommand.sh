@@ -17,6 +17,12 @@ echo 'alias ql="q login"' >> ~/.bashrc
 echo 'alias qc="q chat"' >> ~/.bashrc
 echo 'alias qd="q doctor"' >> ~/.bashrc
 
+# AWS SSOログインとget-caller-identityのエイリアス設定
+# 基本コマンド（デフォルトプロファイル用）
+echo 'alias awslogin="aws sso login && echo \"現在の認証情報:\" && aws sts get-caller-identity"' >> ~/.bashrc
+echo 'alias awsid="aws sts get-caller-identity"' >> ~/.bashrc
+echo 'alias awslist="aws configure list-profiles"' >> ~/.bashrc
+
 echo '
 # プロファイル指定可能なAWS SSOログイン関数
 awsloginp() {
