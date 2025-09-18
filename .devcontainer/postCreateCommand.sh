@@ -36,23 +36,7 @@ awsidp() {
   aws sts get-caller-identity --profile "$1"
 }
 
-# プロファイル指定可能なAWS SSOログイン関数
-awsloginp() {
-  if [ -z "$1" ]; then
-    echo "使用法: awsloginp <プロファイル名>"
-    return 1
-  fi
-  aws sso login --profile "$1" && echo "現在の認証情報 ($1):" && aws sts get-caller-identity --profile "$1"
-}
-
-# プロファイル指定可能なAWS認証情報確認関数
-awsidp() {
-  if [ -z "$1" ]; then
-    echo "使用法: awsidp <プロファイル名>"
-    return 1
-  fi
-  aws sts get-caller-identity --profile "$1"
-}' >> ~/.bashrc
+' >> ~/.bashrc
 
 # エイリアスのTipsを表示する関数
 echo '
